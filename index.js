@@ -14,7 +14,14 @@ function bookInformation(searchId) {
 }
 function bookAvalablitiy(searchId) {
     const searchedBook = books.find(book => book.id === searchId);
-    console.log("Avalable:" + searchedBook?.isAvalable);
+    if (searchedBook?.isAvalable === true) {
+        let status = "The book is avalable to purchase";
+        console.log("Is avalable:" + status);
+    }
+    else {
+        let status = "The book is not avalable to purchase";
+        console.log("Is avalable:" + status);
+    }
 }
 bookInformation(2);
 bookAvalablitiy(2);

@@ -34,8 +34,12 @@ function bookAvalablitiy(searchId: string| number):void {
     const searchedBook = books.find(book=> book.id === searchId)
     if(searchedBook?.isAvalable === true) {
         let status = "The book is avalable to purchase"
+        console.log("Is avalable:" + status)
+    } else {
+        let status = "The book is not avalable to purchase"
+        console.log("Is avalable:" + status)
     }
-    console.log("Is avalable:")
+    
 }
 
 bookInformation(2)
